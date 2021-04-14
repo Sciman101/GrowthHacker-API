@@ -1,4 +1,4 @@
-# GUModding
+# Going Under API
 
 This is an early attempt at a modding API for Going Under, built on BepInEx. Currently, the API...
 - Allows access to the debug menu
