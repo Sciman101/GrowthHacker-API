@@ -1,10 +1,16 @@
 ﻿using UnityEngine;
+using System.Collections.Generic;
+using System;
+
 namespace GUAPI
 {
     public class SkillAPI
     {
         private static GameObject templateSkill;
         private static Material templateMaterial;
+
+        // Used to fix missing icons
+        private static Dictionary<Type, Sprite> iconFixer = new Dictionary<Type, Sprite>();
 
         // This skill is used as something we can easily copy when creating our own skills
         public static void setupTemplateSkill()
@@ -51,12 +57,12 @@ namespace GUAPI
         /// <returns>The skill entity 'prefab'</returns>
         public static GameObject createSkill<T>(string name, string description, Sprite icon, GameObject model, Rarity rarity = Rarity.Fine, bool stackable=false) where T : ModdedSkill
         {
-            GameObject skill = Object.Instantiate(templateSkill,GoingUnderApiPlugin.prefabHelper.transform);
+            GameObject skill = UnityEngine.Object.Instantiate(templateSkill,GoingUnderApiPlugin.prefabHelper.transform);
             skill.name = name;
 
             // Attach model
             Transform visuals = skill.transform.Find("Visuals");
-            GameObject modelInstance = Object.Instantiate(model);
+            GameObject modelInstance = UnityEngine.Object.Instantiate(model);
             modelInstance.transform.SetParent(visuals);
 
             // Assign new material to the model
@@ -78,12 +84,22 @@ namespace GUAPI
             skillInstance.rarity = rarity;
             skillInstance.stackable = stackable;
             skillInstance.SetIcon(icon);
+            iconFixer.Add(typeof(T), icon);
 
             // Add the skill instance to the gamemanager's big list
             GameManager.instance.allSkills.Add(skill.GetComponent<ModPickup>());
 
             // Return the result
             return skill;
+        }
+
+        public static Sprite GetIconFix(Type t)
+        {
+            if (iconFixer.ContainsKey(t))
+            {
+                return iconFixer[t];
+            }
+            return null;
         }
 
     }

@@ -4,6 +4,7 @@ namespace ExampleSkill
 {
     class ExampleSkill : GUAPI.ModdedSkill
     {
+
         // These methods are called when the event listeners should be added/removed from the game
         protected override void InitializeListeners()
         {
