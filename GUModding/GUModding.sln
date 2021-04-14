@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30804.86
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GUAPI", "GUAPI.csproj", "{FF6309EF-4C24-4E35-BCC9-BBB043B0D22A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExampleSkill", "..\ExampleSkill\ExampleSkill.csproj", "{7561ED2F-445C-47D9-9F6E-33A4347CE4B6}"
+	ProjectSection(ProjectDependencies) = postProject
+		{FF6309EF-4C24-4E35-BCC9-BBB043B0D22A} = {FF6309EF-4C24-4E35-BCC9-BBB043B0D22A}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FF6309EF-4C24-4E35-BCC9-BBB043B0D22A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF6309EF-4C24-4E35-BCC9-BBB043B0D22A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF6309EF-4C24-4E35-BCC9-BBB043B0D22A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF6309EF-4C24-4E35-BCC9-BBB043B0D22A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7561ED2F-445C-47D9-9F6E-33A4347CE4B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7561ED2F-445C-47D9-9F6E-33A4347CE4B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7561ED2F-445C-47D9-9F6E-33A4347CE4B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7561ED2F-445C-47D9-9F6E-33A4347CE4B6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D574712E-F302-4B14-A40D-E532449D7EA8}
+	EndGlobalSection
+EndGlobal
