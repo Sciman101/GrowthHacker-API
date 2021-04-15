@@ -4,6 +4,7 @@ This is an early attempt at a modding API for Going Under, built on BepInEx. Cur
 - Allows access to the debug menu
 - Disables steam achievements
 - Allows you to add custom skills through SkillAPI
+- Allows you to add custom costumes for Jackie
 
 To install, start by [Installing BepInEx](https://bepinex.github.io/bepinex_docs/v5.0/articles/user_guide/installation.html), then drop `GUAPI.dll` into BepInEx/plugins.
 
