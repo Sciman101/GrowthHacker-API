@@ -31,7 +31,6 @@ namespace ExampleSkill
         {
             if (info != null && info.attacker == moddedEntity)
             {
-                // Add 1 damage
                 info.damageModAdditional++;
             }
         }

@@ -9,6 +9,7 @@ namespace ExampleSkill
     [BepInDependency("info.sciman.guapi")]
     public class ExampleSkillPlugin : BaseUnityPlugin
     {
+
         void Start()
         {
             // Create our custom skill
@@ -38,7 +39,7 @@ namespace ExampleSkill
             // Once the resources are loaded, we can call a method to add the skill entity
             // And that's it! The bulk of the skill's actual behaviour is handled in 'ExampleSkill.cs'
             // Of course this doesn't account for unlocks or progression yet, but it's a decent start
-            SkillAPI.createSkill<ExampleSkill>(
+            GameObject skill = SkillAPI.createSkill<ExampleSkill>(
                 "Modding Example Skill",
                 "Example Skill Description\n+1<sprite=10>",
                 skillIcon,
