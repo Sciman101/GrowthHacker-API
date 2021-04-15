@@ -53,4 +53,22 @@ namespace GUAPI
         }
     }
 
+
+    // Allows modded costumes to have custom unlock parameters
+    [HarmonyPatch(typeof(Costume), "isUnlocked", MethodType.Getter)]
+    class ModdedCostumePatch
+    {
+        [HarmonyPostfix]
+        static void PostFix(Costume __instance, ref bool __result)
+        {
+            if (__instance is ModdedCostume)
+            {
+                if ((__instance as ModdedCostume).checkUnlockedFunction != null)
+                {
+                    __result = (__instance as ModdedCostume).checkUnlockedFunction();
+                }
+            }
+        }
+    }
+
 }

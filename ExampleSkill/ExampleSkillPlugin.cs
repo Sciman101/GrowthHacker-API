@@ -47,27 +47,37 @@ namespace ExampleSkill
             }
 
 
-            Costume jellyCostume = new Costume();
-            jellyCostume.nameIndex = "JELLY_COSTUME";
-            jellyCostume.mesh = jellyMesh;
-            jellyCostume.unlockRequirement = Costume.UnlockRequirement.None;
-            jellyCostume.material = GlobalSettings.defaults.jackieCostumes[0].material;
+            ModdedCostume jellyCostume = new ModdedCostume
+            {
+                nameIndex = "JELLY_COSTUME",
+                mesh = jellyMesh,
+                unlockRequirement = Costume.UnlockRequirement.None,
+                material = GlobalSettings.defaults.jackieCostumes[0].material,
+                checkUnlockedFunction = () =>
+                {
+                    return false;
+                }
+            };
             GoingUnderApiPlugin.AddCostume(jellyCostume);
             LocalizedText.mainTable.Add("JELLY_COSTUME",new List<string> { "The Barista" });
 
-            Costume marvCostume = new Costume();
-            marvCostume.nameIndex = "MARV_COSTUME";
-            marvCostume.mesh = marvMesh;
-            marvCostume.unlockRequirement = Costume.UnlockRequirement.None;
-            marvCostume.material = GlobalSettings.defaults.jackieCostumes[0].material;
+            ModdedCostume marvCostume = new ModdedCostume
+            {
+                nameIndex = "MARV_COSTUME",
+                mesh = marvMesh,
+                unlockRequirement = Costume.UnlockRequirement.None,
+                material = GlobalSettings.defaults.jackieCostumes[0].material
+            };
             GoingUnderApiPlugin.AddCostume(marvCostume);
             LocalizedText.mainTable.Add("MARV_COSTUME", new List<string> { "The Project Manager" });
 
-            Costume joblinCostume = new Costume();
-            joblinCostume.nameIndex = "JOBLIN_COSTUME";
-            joblinCostume.mesh = joblinMesh;
-            joblinCostume.unlockRequirement = Costume.UnlockRequirement.None;
-            joblinCostume.material = GlobalSettings.defaults.jackieCostumes[0].material;
+            ModdedCostume joblinCostume = new ModdedCostume
+            {
+                nameIndex = "JOBLIN_COSTUME",
+                mesh = joblinMesh,
+                unlockRequirement = Costume.UnlockRequirement.None,
+                material = GlobalSettings.defaults.jackieCostumes[0].material
+            };
             GoingUnderApiPlugin.AddCostume(joblinCostume);
             LocalizedText.mainTable.Add("JOBLIN_COSTUME", new List<string> { "Joblin Time :)" });
 

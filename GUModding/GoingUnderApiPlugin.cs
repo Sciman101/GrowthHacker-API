@@ -38,7 +38,7 @@ namespace GUAPI
 
 
         // Add a new costume to the game
-        public static void AddCostume(Costume costume)
+        public static void AddCostume(ModdedCostume costume)
         {
             Costume[] costumes = new Costume[GlobalSettings.defaults.jackieCostumes.Length + 1];
             for (int i = 0; i < costumes.Length - 1; i++)
