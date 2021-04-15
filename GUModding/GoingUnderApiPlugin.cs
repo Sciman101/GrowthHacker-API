@@ -3,22 +3,10 @@ using BepInEx;
 
 namespace GUAPI
 {
-    [BepInPlugin("info.sciman.guapi","Going Under Modding API","0.0.0")]
+    [BepInPlugin("info.sciman.guapi","Going Under Modding API","0.1.0")]
     public class GoingUnderApiPlugin : BaseUnityPlugin
     {
-
         public static GameObject prefabHelper;
-
-        // API TODO
-        /*
-         * -Block achivements
-         * -Some way to toggle/enable debug menu
-         * -Modified version number
-         * 
-         * -'Prefab' helper
-         * -Skill creation tools
-         * -Resource loading tools
-         */
 
         // Entrypoint
         void Start()

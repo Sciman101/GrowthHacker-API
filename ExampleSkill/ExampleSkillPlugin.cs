@@ -55,6 +55,7 @@ namespace ExampleSkill
                 material = GlobalSettings.defaults.jackieCostumes[0].material,
                 checkUnlockedFunction = () =>
                 {
+                    // Set a custom function to determine if the costume is unlocked or not
                     return false;
                 }
             };
