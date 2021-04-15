@@ -35,5 +35,19 @@ namespace GUAPI
             SkillAPI.setupTemplateSkill();
         }
 
+
+
+        // Add a new costume to the game
+        public static void AddCostume(Costume costume)
+        {
+            Costume[] costumes = new Costume[GlobalSettings.defaults.jackieCostumes.Length + 1];
+            for (int i = 0; i < costumes.Length - 1; i++)
+            {
+                costumes[i] = GlobalSettings.defaults.jackieCostumes[i];
+            }
+            costumes[costumes.Length - 1] = costume;
+            GlobalSettings.defaults.jackieCostumes = costumes;
+        }
+
     }
 }
