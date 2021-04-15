@@ -6,7 +6,7 @@ using GUAPI;
 
 namespace ExampleSkill
 {
-    [BepInPlugin("info.sciman.exampleskill", "Skill API Example", "0.0.0")]
+    [BepInPlugin("info.sciman.exampleskill", "Skill API Example", "0.1.0")]
     [BepInDependency("info.sciman.guapi")]
     public class ExampleSkillPlugin : BaseUnityPlugin
     {
