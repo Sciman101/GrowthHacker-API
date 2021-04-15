@@ -7,7 +7,10 @@ This is an early attempt at a modding API for Going Under, built on BepInEx. Cur
 
 To install, start by [Installing BepInEx](https://bepinex.github.io/bepinex_docs/v5.0/articles/user_guide/installation.html), then drop `GUAPI.dll` into BepInEx/plugins.
 
-There's an included [example skill](https://github.com/Sciman101/GUModding/blob/main/ExampleSkill/ExampleSkillPlugin.cs) to show how to add your own skills. 
+There's an included [example skill](https://github.com/Sciman101/GUModding/blob/main/ExampleSkill/ExampleSkillPlugin.cs) to show how to add your own skills.
+
+**NOTE: IT IS HIGHLY RECCOMENDED YOU MAKE BACKUPS OF YOUR SAVE FILE BEFORE INSTALLING.**
+Save files can be found at `C:\Users\[USER]\AppData\LocalLow\Aggro Crab\Going Under` (Or just put run `%appdata%\..\LocalLow\Aggro Crab\Going Under`)
 
 ## Making mods
 To set up a development environment for making your own skills, create a new project in Visual Studio. It will be a C# Class Library (.NET Standard)
