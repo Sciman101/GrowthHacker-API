@@ -26,7 +26,7 @@ namespace ExampleSkill
             Mesh marvMesh = null;
             Mesh joblinMesh = null;
 
-            using (var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream("ExampleSkill.testbundle"))
+            using (var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream("ExamplePlugin.testbundle"))
             {
 
                 var assetBundle = AssetBundle.LoadFromStream(stream);
