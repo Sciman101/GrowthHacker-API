@@ -3,7 +3,7 @@ using UnityEngine;
 using TMPro;
 using HarmonyLib;
 
-namespace GUAPI
+namespace GrowthHacker
 {
     public class Patcher
     {

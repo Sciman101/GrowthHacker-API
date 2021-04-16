@@ -1,4 +1,4 @@
-# Going Under API
+# Growth Hacker API
 
 This is an early attempt at a modding API for Going Under, built on BepInEx. Currently, the API...
 - Allows access to the debug menu
@@ -58,7 +58,7 @@ To create the costume, you just define an instance of ModdedCostume, providing t
         unlockRequirement = Costume.UnlockRequirement.None,
         material = GlobalSettings.defaults.jackieCostumes[0].material
     };
-    GoingUnderApiPlugin.AddCostume(joblinCostume);
+    GrowthHackerAPI.AddCostume(joblinCostume);
     LocalizedText.mainTable.Add("JOBLIN_COSTUME", new List<string> { "Joblin Time :)" });
 
 Of note are 2 things: Firstly, after or before adding the costume you need to add a localization key so the name of the costume will show up properly.  
@@ -68,4 +68,4 @@ Secondly, is the unlock requirement - There are 3 default options for this:
 - `GetRelic`, which requires beating one of the dungeons for the first time, specified by `relicRequired`
 - `BeatOvertimeLevel`, which requires beating a level of Overtime, specified by `overtimeLevelRequired`
 
-If you want your costume to have unique unlock paramaters, ModdedCostume has the property `checkUnlockedFunction`. By passing a function which takes no parameters and returns a bool, you can override the default unlock behaviour with whatever you want. The Jelly costume in `ExampleSkillPlugin.cs` uses this.
+If you want your costume to have unique unlock paramaters, ModdedCostume has the property `checkUnlockedFunction`. By passing a function which takes no parameters and returns a bool, you can override the default unlock behaviour with whatever you want. The Jelly costume in `ExamplePlugin.cs` uses this.

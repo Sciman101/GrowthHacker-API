@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System;
 
-namespace GUAPI
+namespace GrowthHacker
 {
     public class SkillAPI
     {
@@ -17,7 +17,7 @@ namespace GUAPI
             templateMaterial = existingSkill.GetComponentInChildren<MeshRenderer>().material;
 
             // Create the skill entity
-            templateSkill = GameObject.Instantiate(new GameObject("TemplateSkill", typeof(ItemView)), GoingUnderApiPlugin.prefabHelper.transform);
+            templateSkill = GameObject.Instantiate(new GameObject("TemplateSkill", typeof(ItemView)), GrowthHackerAPI.prefabHelper.transform);
             templateSkill.layer = 15;
             // Attach collider
             CapsuleCollider collider = templateSkill.AddComponent<CapsuleCollider>();
@@ -54,7 +54,7 @@ namespace GUAPI
         /// <returns>The skill entity 'prefab'</returns>
         public static GameObject createSkill<T>(string name, string description, Sprite icon, GameObject model, Rarity rarity = Rarity.Fine) where T : ModdedSkill
         {
-            GameObject skill = UnityEngine.Object.Instantiate(templateSkill,GoingUnderApiPlugin.prefabHelper.transform);
+            GameObject skill = UnityEngine.Object.Instantiate(templateSkill, GrowthHackerAPI.prefabHelper.transform);
             skill.name = name;
 
             // Attach model

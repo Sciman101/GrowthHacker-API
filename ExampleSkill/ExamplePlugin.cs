@@ -2,13 +2,13 @@
 using BepInEx;
 using System.Collections.Generic;
 using UnityEngine;
-using GUAPI;
+using GrowthHacker;
 
 namespace ExampleSkill
 {
-    [BepInPlugin("info.sciman.exampleskill", "Skill API Example", "0.1.0")]
-    [BepInDependency("info.sciman.guapi")]
-    public class ExampleSkillPlugin : BaseUnityPlugin
+    [BepInPlugin("info.sciman.exampleplugin", "Growth Hacker API Example", "0.1.1")]
+    [BepInDependency("info.sciman.growthhacker")]
+    public class ExamplePlugin : BaseUnityPlugin
     {
 
         void Start()
@@ -59,7 +59,7 @@ namespace ExampleSkill
                     return false;
                 }
             };
-            GoingUnderApiPlugin.AddCostume(jellyCostume);
+            GrowthHackerAPI.AddCostume(jellyCostume);
             LocalizedText.mainTable.Add("JELLY_COSTUME",new List<string> { "The Barista" });
 
             ModdedCostume marvCostume = new ModdedCostume
@@ -69,7 +69,7 @@ namespace ExampleSkill
                 unlockRequirement = Costume.UnlockRequirement.None,
                 material = GlobalSettings.defaults.jackieCostumes[0].material
             };
-            GoingUnderApiPlugin.AddCostume(marvCostume);
+            GrowthHackerAPI.AddCostume(marvCostume);
             LocalizedText.mainTable.Add("MARV_COSTUME", new List<string> { "The Project Manager" });
 
             ModdedCostume joblinCostume = new ModdedCostume
@@ -79,7 +79,7 @@ namespace ExampleSkill
                 unlockRequirement = Costume.UnlockRequirement.None,
                 material = GlobalSettings.defaults.jackieCostumes[0].material
             };
-            GoingUnderApiPlugin.AddCostume(joblinCostume);
+            GrowthHackerAPI.AddCostume(joblinCostume);
             LocalizedText.mainTable.Add("JOBLIN_COSTUME", new List<string> { "Joblin Time :)" });
 
 

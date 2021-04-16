@@ -1,20 +1,10 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <AssemblyName>GrowthHackerAPI</AssemblyName>
+    <RootNamespace>GrowthHackerAPI</RootNamespace>
   </PropertyGroup>
-
-  <ItemGroup>
-    <None Remove="bacontable" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <EmbeddedResource Include="bacontable" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\GUModding\GUAPI.csproj" />
-  </ItemGroup>
 
   <ItemGroup>
     <Reference Include="0Harmony">

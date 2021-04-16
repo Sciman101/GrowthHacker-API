@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace GUAPI
+namespace GrowthHacker
 {
     public class ModdedCostume : Costume
     {

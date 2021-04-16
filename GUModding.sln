@@ -3,16 +3,12 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30804.86
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GUAPI", "GUAPI.csproj", "{FF6309EF-4C24-4E35-BCC9-BBB043B0D22A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GrowthHackerAPI", "GrowthHackerAPI\GrowthHackerAPI.csproj", "{FF6309EF-4C24-4E35-BCC9-BBB043B0D22A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExampleSkill", "..\ExampleSkill\ExampleSkill.csproj", "{7561ED2F-445C-47D9-9F6E-33A4347CE4B6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExampleSkill", "ExampleSkill\ExampleSkill.csproj", "{7561ED2F-445C-47D9-9F6E-33A4347CE4B6}"
 	ProjectSection(ProjectDependencies) = postProject
 		{FF6309EF-4C24-4E35-BCC9-BBB043B0D22A} = {FF6309EF-4C24-4E35-BCC9-BBB043B0D22A}
 	EndProjectSection
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BringHomeTheBaconTable", "..\BringHomeTheBaconTable\BringHomeTheBaconTable.csproj", "{8B8A5269-AE59-417A-9A2E-DD61D679035D}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestoreFizzle", "..\RestoreFizzle\RestoreFizzle.csproj", "{93F1D49B-87CC-410A-B2A7-FFA6F262B4FD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,8 +1,9 @@
 ﻿using UnityEngine;
+using GrowthHacker;
 
 namespace ExampleSkill
 {
-    class ExampleSkill : GUAPI.ModdedSkill
+    class ExampleSkill : ModdedSkill
     {
 
         // These methods are called when the event listeners should be added/removed from the game
@@ -20,13 +21,6 @@ namespace ExampleSkill
         // These methods are called when the skill is granted/taken from the player
         protected override void OnApplied(Entity ent)
         {
-            /*if (ent is Player)
-            {
-                ent.GetComponentInChildren<SkinnedMeshRenderer>().sharedMesh = ExampleSkillPlugin.overrideMesh;
-                // Hide hair
-                ent.transform.GetChild(0).GetChild(0).GetChild(1).GetChild(2).GetChild(0)
-                       .GetChild(0).GetChild(2).GetComponentInChildren<MeshRenderer>().enabled = false;
-            }*/
         }
         protected override void OnRemoved(Entity ent)
         {

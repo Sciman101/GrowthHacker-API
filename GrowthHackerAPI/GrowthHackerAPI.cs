@@ -1,16 +1,18 @@
 ﻿using UnityEngine;
 using BepInEx;
 
-namespace GUAPI
+namespace GrowthHacker
 {
-    [BepInPlugin("info.sciman.guapi","Going Under Modding API","0.1.0")]
-    public class GoingUnderApiPlugin : BaseUnityPlugin
+    [BepInPlugin("info.sciman.growthhacker","Growth Hacker API","0.1.1")]
+    public class GrowthHackerAPI : BaseUnityPlugin
     {
         public static GameObject prefabHelper;
 
         // Entrypoint
         void Start()
         {
+            Logger.LogMessage("Initializing Growth Hacker API v" + Info.Metadata.Version);
+
             // Do all the patches
             Patcher.DoPatching();
 
@@ -22,8 +24,6 @@ namespace GUAPI
             // Set up template skill
             SkillAPI.setupTemplateSkill();
         }
-
-
 
         // Add a new costume to the game
         public static void AddCostume(ModdedCostume costume)

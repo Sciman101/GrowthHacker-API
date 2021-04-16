@@ -5,6 +5,18 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="testbundle" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="testbundle" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\GUModding\GrowthHackerAPI.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Reference Include="0Harmony">
       <HintPath>C:\Program Files (x86)\Steam\steamapps\common\Going Under\BepInEx\core\0Harmony.dll</HintPath>
     </Reference>
