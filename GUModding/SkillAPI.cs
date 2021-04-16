@@ -9,9 +9,6 @@ namespace GUAPI
         private static GameObject templateSkill;
         private static Material templateMaterial;
 
-        // Used to fix missing icons
-        private static Dictionary<Type, Sprite> iconFixer = new Dictionary<Type, Sprite>();
-
         // This skill is used as something we can easily copy when creating our own skills
         public static void setupTemplateSkill()
         {
@@ -55,7 +52,7 @@ namespace GUAPI
         /// <param name="rarity">Rarity of the skill</param>
         /// <param name="stackable">Whether or not multiple of this skill can coexist</param>
         /// <returns>The skill entity 'prefab'</returns>
-        public static GameObject createSkill<T>(string name, string description, Sprite icon, GameObject model, Rarity rarity = Rarity.Fine, bool stackable=false) where T : ModdedSkill
+        public static GameObject createSkill<T>(string name, string description, Sprite icon, GameObject model, Rarity rarity = Rarity.Fine) where T : ModdedSkill
         {
             GameObject skill = UnityEngine.Object.Instantiate(templateSkill,GoingUnderApiPlugin.prefabHelper.transform);
             skill.name = name;
@@ -82,24 +79,13 @@ namespace GUAPI
             skillInstance.DisplayNameIndex = name;
             skillInstance.description = description;
             skillInstance.rarity = rarity;
-            skillInstance.stackable = stackable;
             skillInstance.SetIcon(icon);
-            iconFixer.Add(typeof(T), icon);
 
             // Add the skill instance to the gamemanager's big list
             GameManager.instance.allSkills.Add(skill.GetComponent<ModPickup>());
 
             // Return the result
             return skill;
-        }
-
-        public static Sprite GetIconFix(Type t)
-        {
-            if (iconFixer.ContainsKey(t))
-            {
-                return iconFixer[t];
-            }
-            return null;
         }
 
     }

@@ -53,7 +53,6 @@ namespace GUAPI
         }
     }
 
-
     // Allows modded costumes to have custom unlock parameters
     [HarmonyPatch(typeof(Costume), "isUnlocked", MethodType.Getter)]
     class ModdedCostumePatch
