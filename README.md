@@ -6,7 +6,7 @@ This is an early attempt at a modding API for Going Under, built on BepInEx. Cur
 - Allows you to add custom skills through SkillAPI
 - Allows you to add custom costumes for Jackie
 
-To install, start by [Installing BepInEx](https://bepinex.github.io/bepinex_docs/v5.0/articles/user_guide/installation.html), then drop `GUAPI.dll` into BepInEx/plugins.
+To install, start by [Installing BepInEx](https://bepinex.github.io/bepinex_docs/v5.0/articles/user_guide/installation.html), then drop `GrowthHackerAPI.dll` into BepInEx/plugins.
 
 There's an included [example skill](https://github.com/Sciman101/GUModding/blob/main/ExampleSkill/ExampleSkillPlugin.cs) to show how to add your own skills.
 
