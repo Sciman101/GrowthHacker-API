@@ -5,14 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="testbundle" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <EmbeddedResource Include="testbundle" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\GrowthHackerAPI\GrowthHackerAPI.csproj" />
   </ItemGroup>
 
